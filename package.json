@@ -1,0 +1,18 @@
+{
+  "name": "dogeawad",
+  "version": "1.0.0",
+  "description": "A DogeHouse Bot.",
+  "main": "index.js",
+  "repository": "https://github.com/KhaledCP/dogeawad.git",
+  "author": "KhaledCP",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dogehouse.js": "^3.0.0-b1",
+    "dotenv": "^9.0.2",
+    "moonstone-wrapper": "^0.0.8"
+  }
+}
