@@ -6,6 +6,6 @@ Idea(s)
 - BLA BLA
 - BLA BLA BLA
 
-# Please Think
+# Please Think About It
 
-Before suggesting a feature PLEASE think...
+Before suggesting a feature PLEASE think about it...
