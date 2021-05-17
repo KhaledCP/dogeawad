@@ -11,13 +11,12 @@ bot.on("ready", async (user) => {
     name: "DogeAwad Bot Room",
     description: "The DogeAwad Bot Room. (Bot in development)",
   });
+
   await bot.joinRoom(room);
 });
 
 bot.on("handRaised", async (user, room) => {
-  if (room) {
-    await user.setAsSpeaker();
-  }
+  await user.setAsSpeaker();
 });
 
 bot.on("userJoinRoom", async (user, room) => {
