@@ -1,6 +1,7 @@
 require("dotenv").config();
 const Moonstone = require("moonstone-wrapper");
 const bot = Moonstone(process.env.API_KEY);
+const ytdl = require("ytdl-core");
 
 bot.on("ready", async (user) => {
   // Log to the console the username that was logged in as.
@@ -15,8 +16,8 @@ bot.on("ready", async (user) => {
   await bot.joinRoom(room);
 });
 
-bot.on("handRaised", async (user, room) => {
-  await user.setAsSpeaker();
+bot.on("joinedRoom", async (room) => {
+  playBackgroundMusic(room);
 });
 
 bot.on("userJoinRoom", async (user, room) => {
@@ -30,6 +31,26 @@ bot.on("userJoinRoom", async (user, room) => {
     await user.sendWhisper(welcomeMessage);
   }
 });
+
+bot.on("handRaised", async (user, room) => {
+  await user.setAsSpeaker();
+});
+
+// Music
+const playBackgroundMusic = async (room) => {
+  let stream;
+
+  try {
+    stream = await ytdl("https://www.youtube.com/watch?v=ttEI35HVpqI");
+  } catch (e) {
+    await room.sendChatMessage("Failed to get audio/video: " + e.message);
+  }
+
+  if (!stream) return;
+
+  const audioConnection = await room.connect();
+  audioConnection.play(stream, { type: "opus" });
+};
 
 // Connect the bot to Dogehouse
 bot.connect();
