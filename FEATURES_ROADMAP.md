@@ -6,8 +6,9 @@ NONE
 
 #### In progress
 
-- Background Music
+NONE
 
 #### Completed
 
 - Welcome Users
+- Background Music
