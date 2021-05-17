@@ -7,7 +7,7 @@ A DogeHouse bot. (Dogehouse.tv)
 Feel free to contribute, but make sure to create a issue so that I know what your working on.
 
 # Suggesting A Feature
-Just create an issue. (Recommended) read BEFORE_SUGGESTING_FEATURE.md before doing so.
+Just create an issue. (Recommended) read [BEFORE_SUGGESTING_FEATURE.md](https://github.com/KhaledCP/dogeawad/blob/main/BEFORE_SUGGESTING_FEATURE.md) before doing so.
 
 # License
 
